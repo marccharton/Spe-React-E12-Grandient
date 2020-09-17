@@ -1,5 +1,11 @@
 import { TEST_ACTION } from 'src/actions/test';
-import { INCREMENT_COLORS } from 'src/actions/gradient';
+import {
+    INCREMENT_COLORS,
+    RANDOM_FIRST_COLOR,
+    RANDOM_LAST_COLOR,
+    CHANGE_DIRECTION,
+} from 'src/actions/gradient';
+import { randomHexColor } from 'src/utils';
 
 // == State
 const initialState = {
@@ -21,6 +27,21 @@ const reducer = (state = initialState, action = {}) => {
         return {
             ...state,
             nbColors: state.nbColors + 1,
+        };
+    case RANDOM_FIRST_COLOR:
+        return {
+            ...state,
+            firstColor: randomHexColor(),
+        };
+    case RANDOM_LAST_COLOR:
+        return {
+            ...state,
+            lastColor: randomHexColor(),
+        };
+    case CHANGE_DIRECTION:
+        return {
+            ...state,
+            direction: action.direction,
         };
     default:
         return state;
