@@ -5,8 +5,10 @@
     "browser": true
   },
   "rules": {
-    "linebreak-style": ["windows"],
+    "no-console": ["off"],
+    "indent": ["warn", 4],
     "brace-style": ["error", "stroustrup"],
+    "linebreak-style": ["error", "unix"],
     "no-param-reassign": [
       "error",
       {

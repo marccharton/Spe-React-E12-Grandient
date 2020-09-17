@@ -5,7 +5,7 @@ import reducer from 'src/reducer';
 
 const store = createStore(
     reducer,
-    devToolsEnhancer()
+    devToolsEnhancer(),
 );
 
 export default store;
