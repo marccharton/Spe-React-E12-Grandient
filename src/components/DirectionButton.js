@@ -1,15 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DirectionButton = ({ label, direction, changeDirection }) => (
-    <button type="button" className="button" onClick={() => changeDirection(direction)}>
-        {label}
-    </button>
-);
+const DirectionButton = ({ label, changeDirection, current }) => {
+    const currentCss = current
+        ? { background: '#6090DC', color: '#FFF' }
+        : {};
+
+    return (
+        <button style={currentCss} type="button" className="button" onClick={changeDirection}>
+            {label}
+        </button>
+    );
+};
 
 DirectionButton.propTypes = {
     label: PropTypes.string.isRequired,
-    direction: PropTypes.string.isRequired,
     changeDirection: PropTypes.func.isRequired,
 };
 

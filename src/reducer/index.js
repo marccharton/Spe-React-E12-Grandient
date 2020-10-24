@@ -1,4 +1,3 @@
-import { TEST_ACTION } from 'src/actions/test';
 import {
     INCREMENT_COLORS,
     RANDOM_FIRST_COLOR,
@@ -18,11 +17,6 @@ const initialState = {
 
 const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
-    case TEST_ACTION:
-        return {
-            ...state,
-            pouet: !state.pouet,
-        };
     case INCREMENT_COLORS:
         return {
             ...state,

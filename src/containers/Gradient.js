@@ -1,16 +1,11 @@
 import { connect } from 'react-redux';
 import Gradient from '../components/Gradient';
 
-const mapStateToProps = (state) => ({
-    firstColor: state.firstColor,
-    lastColor: state.lastColor,
-    direction: state.direction,
-});
-const mapDispatchToProps = null;
-
-const GradientContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps,
+export default connect(
+    (state) => ({
+        firstColor: state.firstColor,
+        lastColor: state.lastColor,
+        direction: state.direction,
+    }),
+    null,
 )(Gradient);
-
-export default GradientContainer;

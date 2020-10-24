@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 const NbColors = ({ nbColors, message }) => (
     <div id="nbColors">
@@ -12,4 +13,9 @@ NbColors.propTypes = {
     message: PropTypes.string.isRequired,
 };
 
-export default NbColors;
+export default connect(
+    (state) => ({
+        nbColors: state.nbColors,
+    }),
+    null,
+)(NbColors);

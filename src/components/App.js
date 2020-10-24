@@ -1,5 +1,5 @@
 import React from 'react';
-import NbColors from 'src/containers/NbColors';
+import NbColors from 'src/components/NbColors';
 import RandomButtons from 'src/containers/RandomButtons';
 import Colors from 'src/containers/Colors';
 import Gradient from 'src/containers/Gradient';
